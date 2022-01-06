@@ -1,8 +1,8 @@
 from instapy import InstaPy
 from instapy import smart_run
 
-user= "joker.showroomparana@hotmail.com"
-pas = "alanalva"
+user= "********@hotmail.com"
+pas = "*****"
 
 
 comentarios = ["Lindo auto! @{}",
