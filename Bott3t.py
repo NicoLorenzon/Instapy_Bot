@@ -4,7 +4,7 @@ from instapy import smart_run
 
 # login credentials
 insta_username = 'tercertiempoparana'
-insta_password = 'sanmartin695'
+insta_password = '*******'
 
 dont_likes = ['sex', 'nude', 'naked', 'beef', 'pork',
             'sausage', 'lobster','fisch', 'schwein', 'lamm', 'rind', 'kuh', 'meeresfrüchte',
@@ -21,18 +21,18 @@ like_tag_list = ['rugby','argentina','sport','actualidadscrum','sports','rugbyun
                 'pasion','hockeylife','mamihockey','hockeygame','leonas','lasleonas',
                 'leones','losleones','crai','qlsr','prc','cae','paracao']
 
-# prevent posts that contain some plantbased meat from being skipped
+
 ignore_list = ['animal','natgeo','zoo','porn']
 
 accounts = ['unionargentina','lasleonashockeyargentina','lospumasuar','jaguaresarg']
 
-# get a session!
+
 session = InstaPy(username=insta_username,
                   password=insta_password,
                   headless_browser=False)
 
 with smart_run(session):
-    # settings
+    
     session.set_relationship_bounds(enabled=True,
                                     max_followers=15000)
 
@@ -44,16 +44,12 @@ with smart_run(session):
     session.set_do_follow(enabled=True, percentage=40)
     session.set_do_like(enabled=True, percentage=80)
 
-    # activity
+    
     session.like_by_tags(random.sample(like_tag_list, 3),
                         amount=random.randint(50, 100), interact=True)
 
-    # session.unfollow_users(amount=random.randint(75, 150),
-    #                     InstapyFollowed=(True, "all"), style="FIFO",
-    #                        unfollow_after=90 * 60 * 60, sleep_delay=501)
-
-    """ Joining Engagement Pods...
-    """
+  Joining Engagement Pods...
+    
     photo_comments = ['Muy buena! @{}',
         'Genial! @{}',
         'Pasa por mi pefil y mirá nuestras prendas y accesorios! :thumbsup:',
